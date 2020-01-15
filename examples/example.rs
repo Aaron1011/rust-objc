@@ -1,5 +1,9 @@
+#![feature(never_type)]
+#![feature(never_type_fallback)]
+
 #[macro_use]
 extern crate objc;
+
 
 use objc::Encode;
 use objc::rc::StrongPtr;
@@ -42,4 +46,8 @@ fn main() {
         msg_send![*obj, hash]
     };
     println!("NSObject hash: {}", hash);
+
+    unsafe {
+        let x: _ = msg_send![*obj, hash];
+    }
 }
