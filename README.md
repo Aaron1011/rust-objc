@@ -1,3 +1,9 @@
+# Never-type fallback PR:
+
+Use `cargo build --example example` (using a locally built toolchain)
+to see the diagnostic
+
+
 Objective-C Runtime bindings and wrapper for Rust.
 
 * Documentation: http://ssheldon.github.io/rust-objc/objc/
